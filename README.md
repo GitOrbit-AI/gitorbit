@@ -234,39 +234,39 @@ const swarm = await orbit.swarm.launch({
 
 ### Identity
 
-| Method | Description |
-|--------|-------------|
-| `identity.create()` | Generate a new Cosmic DID |
-| `identity.resolve(did)` | Resolve a DID to its document |
-| `identity.sign(data)` | Sign data with your keypair |
-| `identity.verify(data, sig)` | Verify a signature |
+| Method                       | Description                   |
+| ---------------------------- | ----------------------------- |
+| `identity.create()`          | Generate a new Cosmic DID     |
+| `identity.resolve(did)`      | Resolve a DID to its document |
+| `identity.sign(data)`        | Sign data with your keypair   |
+| `identity.verify(data, sig)` | Verify a signature            |
 
 ### Repository
 
-| Method | Description |
-|--------|-------------|
-| `repo.create(name)` | Create a new repository |
-| `repo.clone(did)` | Clone a repository by DID |
-| `repo.push(remote, branch)` | Push to orbital network |
-| `repo.list(galaxy)` | List repos in a galaxy |
+| Method                      | Description               |
+| --------------------------- | ------------------------- |
+| `repo.create(name)`         | Create a new repository   |
+| `repo.clone(did)`           | Clone a repository by DID |
+| `repo.push(remote, branch)` | Push to orbital network   |
+| `repo.list(galaxy)`         | List repos in a galaxy    |
 
 ### Agent
 
-| Method | Description |
-|--------|-------------|
-| `agent.spawn(config)` | Spawn a new agent |
+| Method                      | Description           |
+| --------------------------- | --------------------- |
+| `agent.spawn(config)`       | Spawn a new agent     |
 | `agent.delegate(did, caps)` | Delegate capabilities |
-| `agent.trust(did)` | Get agent trust score |
-| `swarm.launch(config)` | Launch an agent swarm |
+| `agent.trust(did)`          | Get agent trust score |
+| `swarm.launch(config)`      | Launch an agent swarm |
 
 ### Neural Gateway
 
-| Method | Description |
-|--------|-------------|
-| `neural.complete(config)` | Single model completion |
-| `neural.multiModelConsensus(config)` | Multi-model consensus |
-| `neural.embed(text)` | Generate embeddings |
-| `neural.analyze(repo)` | AI-powered repo analysis |
+| Method                               | Description              |
+| ------------------------------------ | ------------------------ |
+| `neural.complete(config)`            | Single model completion  |
+| `neural.multiModelConsensus(config)` | Multi-model consensus    |
+| `neural.embed(text)`                 | Generate embeddings      |
+| `neural.analyze(repo)`               | AI-powered repo analysis |
 
 ## Configuration
 
@@ -300,13 +300,13 @@ max_tokens = 4096
 
 ## Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `GITORBIT_DID` | Your Cosmic DID | - |
-| `GITORBIT_KEYFILE` | Path to keypair | `~/.gitorbit/identity.json` |
-| `GITORBIT_GALAXY` | Default galaxy | `andromeda` |
-| `GITORBIT_LOG_LEVEL` | Logging level | `info` |
-| `GITORBIT_NEURAL_MODEL` | Default AI model | `claude-4-opus` |
+| Variable                | Description      | Default                     |
+| ----------------------- | ---------------- | --------------------------- |
+| `GITORBIT_DID`          | Your Cosmic DID  | -                           |
+| `GITORBIT_KEYFILE`      | Path to keypair  | `~/.gitorbit/identity.json` |
+| `GITORBIT_GALAXY`       | Default galaxy   | `andromeda`                 |
+| `GITORBIT_LOG_LEVEL`    | Logging level    | `info`                      |
+| `GITORBIT_NEURAL_MODEL` | Default AI model | `claude-4-opus`             |
 
 ## Contributing
 
@@ -328,8 +328,8 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 - 🌐 [Website](https://gitorbit.xyz)
 - 📚 [Documentation](https://docs.gitorbit.xyz)
-- 💬 [Discord](https://discord.gg/gitorbit)
-- 🐦 [Twitter](https://twitter.com/gitorbit)
+- 💬 [Discord](https://discord.gg/)
+- 🐦 [Twitter](https://twitter.com/git_orbit)
 
 ---
 

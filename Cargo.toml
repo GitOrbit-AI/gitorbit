@@ -1,0 +1,73 @@
+[package]
+name = "gitorbit"
+version = "0.3.0"
+edition = "2021"
+authors = ["GitOrbit Team <team@gitorbit.xyz>"]
+description = "The open-source agent protocol for GitOrbit intergalactic network"
+license = "MIT"
+repository = "https://github.com/gitorbit/protocol"
+documentation = "https://docs.gitorbit.xyz"
+keywords = ["git", "decentralized", "agents", "ai", "ipfs", "neural"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1"
+futures = "0.3"
+
+# Networking
+libp2p = { version = "0.53", features = ["tcp", "dns", "websocket", "noise", "yamux", "gossipsub", "kad", "identify"] }
+axum = "0.7"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Cryptography
+ed25519-dalek = "2.1"
+rand = "0.8"
+sha2 = "0.10"
+base64 = "0.21"
+bs58 = "0.5"
+
+# Storage
+cid = "0.11"
+multihash = "0.19"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+indicatif = "0.17"
+console = "0.15"
+dialoguer = "0.11"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# HTTP client
+reqwest = { version = "0.11", features = ["json"] }
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio", "postgres", "sqlite"] }
+
+[dev-dependencies]
+tempfile = "3.9"
+mockall = "0.12"
+tokio-test = "0.4"
+
+[[bin]]
+name = "gitorbit"
+path = "src/main.rs"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

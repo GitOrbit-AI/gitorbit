@@ -1,0 +1,21 @@
+# Ignore build artifacts
+/target/
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore local configuration
+.env
+.env.local
+config.local.toml
+
+# Ignore identity files (contain private keys)
+identity.json
+*.key
